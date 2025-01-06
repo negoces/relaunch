@@ -16,7 +16,7 @@ date: 2025-01-01 22:00:00
 ## Docker Compose
 
 ```yaml
-# Port: 1883
+# Port: 1883/tcp 8083/ws
 services:
   mosquitto:
     image: eclipse-mosquitto:2
@@ -37,6 +37,7 @@ services:
 ```ini
 allow_anonymous true
 listener 1883 0.0.0.0
+listener 8083 0.0.0.0
 protocol websockets
 persistence true
 persistence_location /mosquitto/data
