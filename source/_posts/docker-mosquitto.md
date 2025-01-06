@@ -11,7 +11,7 @@ date: 2025-01-01 22:00:00
 
 > Eclipse Mosquitto is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1. Mosquitto is lightweight and is suitable for use on all devices from low power single board computers to full servers.
 >
-> Eclipse Mosquitto 是一个开源（EPL/EDL 许可）的消息代理，实现了 MQTT 协议的 5.0、3.1.1 和 3.1 版本。Mosquitto 轻量级，适用于从低功耗单板计算机到全功能服务器的各种设备。
+> Eclipse Mosquitto 是一个开源的（EPL/EDL 许可）消息代理，支持实现 MQTT 协议的 5.0、3.1.1 和 3.1 版本。Mosquitto 具有轻量级特点，适用于从低功耗单板计算机到完整服务器的各种设备。
 
 ## Docker Compose
 
