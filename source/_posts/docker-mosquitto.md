@@ -49,5 +49,6 @@ log_dest stdout
 - 调试工具:
   - Serial-Studio: <https://github.com/Serial-Studio/Serial-Studio>
   - MQTTX: <https://github.com/emqx/MQTTX>
+  - MQTT Explorer: <https://github.com/thomasnordquist/MQTT-Explorer>
 - 其他替代:
   - NanoMQ: <https://github.com/nanomq/nanomq>
