@@ -24,7 +24,11 @@ date: 2025-01-06 18:20:00
 ## 安装
 
 ```bash
+# Arch
 sudo pacman -Sy openvpn
+# Debian
+sudo apt install openvpn
+sudo apt install policykit-1
 ```
 
 ## 生成 PKI 证书
@@ -51,4 +55,89 @@ openssl verify -CAfile rootCA.crt ${OVPN_NODE_NAME}.crt
 # dh
 # if slow, download: https://ssl-config.mozilla.org/ffdhe2048.txt
 openssl dhparam -out dh2048.pem 2048
+```
+
+## 配置服务端
+
+在 `/etc/openvpn/server` 文件夹中创建配置文件，并放入证书，例如：
+
+```bash
+/etc/openvpn/server
+├── access.conf
+├── Access.crt
+├── Access.key
+├── dh2048.pem
+└── rootCA.crt
+```
+
+示例的配置文件为：`/etc/openvpn/server/access.conf`
+
+```conf
+mode server
+proto udp
+port 1194
+dev tapovpn
+ifconfig 10.25.0.1 255.255.255.0
+keepalive 10 120
+verb 3
+
+server-bridge 10.25.0.1 255.255.255.0 10.25.0.2 10.25.0.254
+client-to-client
+duplicate-cn
+
+cipher AES-256-GCM
+
+ca rootCA.crt
+cert Access.crt
+key Access.key
+dh dh2048.pem
+```
+
+启动，以及设置自启。`access` 替换为自己的配置文件名称
+
+```bash
+sudo systemctl start openvpn-server@access
+sudo systemctl status openvpn-server@access
+sudo systemctl enable openvpn-server@access
+```
+
+## 配置客户端
+
+在 `/etc/openvpn/client` 文件夹中创建配置文件，并放入证书，例如：
+
+```bash
+/etc/openvpn/client
+├── rootCA.crt
+├── turing.conf
+├── Turing.crt
+└── Turing.key
+```
+
+示例的配置文件为：`/etc/openvpn/client/turing.conf`
+
+```conf
+remote ddns.hf.rootless.cc 1194
+proto udp
+connect-retry 5 60
+resolv-retry infinite
+nobind
+dev tapovpn
+keepalive 10 120
+verb 3
+
+client
+
+cipher AES-256-GCM
+
+ca rootCA.crt
+cert Turing.crt
+key Turing.key
+```
+
+启动，以及设置自启。`turing` 替换为自己的配置文件名称
+
+```bash
+sudo systemctl start openvpn-client@turing
+sudo systemctl status openvpn-client@turing
+sudo systemctl enable openvpn-client@turing
 ```
