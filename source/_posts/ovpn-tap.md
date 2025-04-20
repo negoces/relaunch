@@ -141,3 +141,44 @@ sudo systemctl start openvpn-client@turing
 sudo systemctl status openvpn-client@turing
 sudo systemctl enable openvpn-client@turing
 ```
+
+### 适用于 Windows/Android 的单 OVPN 配置
+
+Windows/Android 系统导入配置时仅支持单文件，可以使用以下方法合并为单文件(在 ... 中填写完整证书信息):
+
+```conf
+remote ddns.hf.rootless.cc 1194
+proto udp
+connect-retry 5 60
+resolv-retry infinite
+nobind
+dev tapovpn
+keepalive 10 120
+verb 3
+
+client
+
+cipher AES-256-GCM
+
+<ca>
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+</ca>
+
+<cert>
+-----BEGIN CERTIFICATE-----
+...
+-----END CERTIFICATE-----
+</cert>
+
+<key>
+-----BEGIN PRIVATE KEY-----
+...
+-----END PRIVATE KEY-----
+</key>
+```
+
+### 指定 IPv4/IPv6 链接
+
+使用 `proto udp4/udp6` 来指定连接版本
