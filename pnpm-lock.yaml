@@ -31,7 +31,7 @@ importers:
         version: 2.0.0
       hexo-renderer-marked:
         specifier: ^7.0.0
-        version: 7.0.0
+        version: 7.0.1
       hexo-renderer-stylus:
         specifier: ^3.0.1
         version: 3.0.1
@@ -42,8 +42,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       hexo-theme-stellar:
-        specifier: ^1.29.1
-        version: 1.29.1
+        specifier: ^1.30.0
+        version: 1.30.0
 
 packages:
 
@@ -395,8 +395,8 @@ packages:
     resolution: {integrity: sha512-qCjE1IdwgDgv65qyb0KMVCwCdSVAkH0vwAe9XihjvaKWkmb9dtt8DgErOdqCXn0HReSyWiEVP2BrLRj3gyHwOQ==}
     engines: {node: '>=12'}
 
-  hexo-renderer-marked@7.0.0:
-    resolution: {integrity: sha512-rh9RGX2ijbdXQ7PElniCu7TReucFiO7Apvk/hzDg2t9N4umiz6QmANTR1yGvnQI8Ap/G8QtmsyVeG7313KhTVQ==}
+  hexo-renderer-marked@7.0.1:
+    resolution: {integrity: sha512-H9IMnDuhjAL24NjWJuqQG0Utdw09159AI531Dbs7jSqmXSXVImoA7SeWIt4XLDRKr1nfWwn+eDziWo4UT6f1fA==}
     engines: {node: '>=18'}
 
   hexo-renderer-stylus@3.0.1:
@@ -410,8 +410,8 @@ packages:
   hexo-theme-landscape@1.1.0:
     resolution: {integrity: sha512-nszjixBEiEDZjf7glAGbHg0nKGHZdUDwzFVVdRDeu4FeHfGcY5CZNl9sF4vSligjnD8IwFXpDfx5E+GRmNKvWg==}
 
-  hexo-theme-stellar@1.29.1:
-    resolution: {integrity: sha512-6OetnuydRZ0ZYrpGeFj5D1kABLgRign6X7Jaz1xNwqso8S51X1cSZgSmdivaYPDYIDHvZD6czmErj1TS+gAlKg==}
+  hexo-theme-stellar@1.30.0:
+    resolution: {integrity: sha512-3GABFI3mD/AvGdLW4wAclEWB9Sk3/c4IhIem9Dc8LIAcwk66q5yqCrOkgy3eDurWArZkpWZXKUuPgqRH7dvWQg==}
 
   hexo-util@2.7.0:
     resolution: {integrity: sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==}
@@ -1250,7 +1250,7 @@ snapshots:
     dependencies:
       ejs: 3.1.10
 
-  hexo-renderer-marked@7.0.0:
+  hexo-renderer-marked@7.0.1:
     dependencies:
       dompurify: 3.2.3
       hexo-util: 3.3.0
@@ -1284,7 +1284,7 @@ snapshots:
 
   hexo-theme-landscape@1.1.0: {}
 
-  hexo-theme-stellar@1.29.1:
+  hexo-theme-stellar@1.30.0:
     dependencies:
       hexo-renderer-ejs: 2.0.0
       hexo-renderer-stylus: 3.0.1
