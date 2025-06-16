@@ -42,8 +42,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       hexo-theme-stellar:
-        specifier: ^1.29.1
-        version: 1.29.1
+        specifier: ^1.30.2
+        version: 1.30.2
 
 packages:
 
@@ -410,8 +410,8 @@ packages:
   hexo-theme-landscape@1.1.0:
     resolution: {integrity: sha512-nszjixBEiEDZjf7glAGbHg0nKGHZdUDwzFVVdRDeu4FeHfGcY5CZNl9sF4vSligjnD8IwFXpDfx5E+GRmNKvWg==}
 
-  hexo-theme-stellar@1.29.1:
-    resolution: {integrity: sha512-6OetnuydRZ0ZYrpGeFj5D1kABLgRign6X7Jaz1xNwqso8S51X1cSZgSmdivaYPDYIDHvZD6czmErj1TS+gAlKg==}
+  hexo-theme-stellar@1.30.2:
+    resolution: {integrity: sha512-9RWFe8yoknfZ6GcNpF309AQOYIpeZoz5tDhdSZaqKnOJ4mQjKbD6yean80SnmIt8xP/otincf4P1FOz+5QZWTw==}
 
   hexo-util@2.7.0:
     resolution: {integrity: sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==}
@@ -1284,7 +1284,7 @@ snapshots:
 
   hexo-theme-landscape@1.1.0: {}
 
-  hexo-theme-stellar@1.29.1:
+  hexo-theme-stellar@1.30.2:
     dependencies:
       hexo-renderer-ejs: 2.0.0
       hexo-renderer-stylus: 3.0.1
