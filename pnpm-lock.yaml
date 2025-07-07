@@ -42,8 +42,8 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0
       hexo-theme-stellar:
-        specifier: ^1.32.4
-        version: 1.32.4
+        specifier: ^1.33.0
+        version: 1.33.0
 
 packages:
 
@@ -442,8 +442,8 @@ packages:
   hexo-theme-landscape@1.1.0:
     resolution: {integrity: sha512-nszjixBEiEDZjf7glAGbHg0nKGHZdUDwzFVVdRDeu4FeHfGcY5CZNl9sF4vSligjnD8IwFXpDfx5E+GRmNKvWg==}
 
-  hexo-theme-stellar@1.32.4:
-    resolution: {integrity: sha512-E3s8b0v7nyEsECzyP1eqG8FYcKnD1sgkDtGvsvHmo+q2SETnpATjRMAA2PLEYUfZ69+eyaCNYWlbW9MnIQmV0A==}
+  hexo-theme-stellar@1.33.0:
+    resolution: {integrity: sha512-TfC+NJ71JacsJ+EpvWTxTaFDojj6LZlkDRoZUVICK72Qh6hG1MqWQJSh5BIJnw07ZVYYannMjKWlQDlQI+jRcw==}
 
   hexo-util@2.7.0:
     resolution: {integrity: sha512-hQM3h34nhDg0bSe/Tg1lnpODvNkz7h2u0+lZGzlKL0Oufp+5KCAEUX9wal7/xC7ax3/cwEn8IuoU75kNpZLpJQ==}
@@ -1402,7 +1402,7 @@ snapshots:
 
   hexo-theme-landscape@1.1.0: {}
 
-  hexo-theme-stellar@1.32.4:
+  hexo-theme-stellar@1.33.0:
     dependencies:
       cheerio: 1.1.0
       hexo-renderer-ejs: 2.0.0
